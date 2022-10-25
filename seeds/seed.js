@@ -1,5 +1,4 @@
 const sequelize = require("../config/connection");
-const seedText = require("../seeds/textData.json");
 const { User, Text } = require("../models");
 
 const userData = require("./userData.json");
@@ -13,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await seedText();
+  await Text.create(textData);
 
   process.exit(0);
 };
