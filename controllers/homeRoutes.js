@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 
   const texts = textData.map((data) => data.get({ plain: true }));
 
-  // console.log(text); //Does work
+  console.log(texts); //Does work
 
   res.render("homepage", { texts });
 });
