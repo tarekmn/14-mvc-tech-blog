@@ -5,11 +5,11 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   const textData = await Text.findAll();
 
-  const text = textData.map((data) => data.get({ plain: true }));
+  const texts = textData.map((data) => data.get({ plain: true }));
 
-  console.log(text); //Does work
+  // console.log(text); //Does work
 
-  res.render("homepage", { text });
+  res.render("homepage", { texts });
 });
 
 router.get("/login", (req, res) => {
