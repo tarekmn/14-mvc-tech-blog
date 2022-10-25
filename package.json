@@ -23,5 +23,13 @@
   "devDependencies": {
     "nodemon": "^2.0.20"
   },
-  "description": ""
+  "description": "## Your Task",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarekmn/14-mvc-tech-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tarekmn/14-mvc-tech-blog/issues"
+  },
+  "homepage": "https://github.com/tarekmn/14-mvc-tech-blog#readme"
 }
