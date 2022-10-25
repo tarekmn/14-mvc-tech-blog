@@ -3,15 +3,13 @@ const { Text, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  try {
-    const textData = await Text.findAll();
+  const textData = await Text.findAll();
 
-    const text = textData.map((data) => data.get({ plain: true }));
+  const text = textData.map((data) => data.get({ plain: true }));
 
-    res.render("homepage", text);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  console.log(text); //Does work
+
+  res.render("homepage", { text });
 });
 
 router.get("/login", (req, res) => {
