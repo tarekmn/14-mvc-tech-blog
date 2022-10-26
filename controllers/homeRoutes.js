@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 
   const texts = textData.map((data) => data.get({ plain: true }));
 
-  console.log(texts); //Does work
+  console.log(req.session.logged_in);
 
   res.render("homepage", { texts });
 });
