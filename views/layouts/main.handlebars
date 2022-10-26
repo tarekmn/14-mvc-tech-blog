@@ -24,16 +24,12 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Dashboard</a>
       </li>
-       {{#if req.session.logged_in}}
-        <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
+       
+      <li class="nav-item">
+        <a class="nav-link auth" href="#">
+          {{#if loggedIn}}Logout{{else}}Login{{/if}}
+        </a>
       </li>
-      
-      {{else}}
-     <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-        {{/if}}
     </ul>
   </div>
 </nav>
@@ -41,11 +37,7 @@
     <h1>
     
     </h1>
-    {{!-- {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}} --}}
+
 
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -54,10 +46,8 @@
       
   </footer>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
 
+ <script src="/js/logout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 

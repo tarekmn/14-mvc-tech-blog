@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
 
   console.log(req.session.logged_in);
 
-  res.render("homepage", { blogs });
+  res.render("homepage", { blogs, loggedIn: req.session.logged_in });
 });
 
 router.get("/login", (req, res) => {
