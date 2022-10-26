@@ -21,5 +21,4 @@ const loginLogout = async (event) => {
   }
 };
 
-console.log("hello");
 document.querySelector(".auth").addEventListener("click", loginLogout);
