@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const { Text, User } = require("../models");
+const { Blog, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  const textData = await Text.findAll();
+  const blogData = await Blog.findAll();
 
-  const texts = textData.map((data) => data.get({ plain: true }));
+  const blogs = blogData.map((data) => data.get({ plain: true }));
 
   console.log(req.session.logged_in);
 
-  res.render("homepage", { texts });
+  res.render("homepage", { blogs });
 });
 
 router.get("/login", (req, res) => {

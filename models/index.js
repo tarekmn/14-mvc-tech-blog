@@ -1,7 +1,7 @@
 const User = require("./User");
-const Text = require("./Text");
+const Blog = require("./Blog");
 
 module.exports = {
   User,
-  Text,
+  Blog,
 };
