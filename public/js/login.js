@@ -21,7 +21,7 @@ const loginFormHandler = async (event) => {
 
 const redirectSignup = async (event) => {
   event.preventDefault();
-  await console.log("target here");
+  document.location.replace("/signup");
 };
 
 document
