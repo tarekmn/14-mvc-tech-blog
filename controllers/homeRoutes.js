@@ -21,6 +21,19 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/dashboard", async (req, res) => {
+  const blogData = await Blog.findAll();
+
+  const blogs = blogData.map((data) => data.get({ plain: true }));
+
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("dashboard", { blogs, loggedIn: req.session.logged_in });
+});
+
 router.get("/signup", (req, res) => {
   res.render("createaccount");
 });
