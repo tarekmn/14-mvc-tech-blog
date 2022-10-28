@@ -6,13 +6,15 @@
 <div class="card">
   <div class="card-header">
     <h4>{{ blog.title }}</h4>
+    <h6> Created by {{ blog.user_id }} </h6>
   </div>
   <div class="card-body">
     <p class="card-title"> {{ format_time blog.createdAt }}</p>
     <p class="card-text">{{ blog.description }}</p>
-    <a href="#" class="btn btn-primary">Info</a>
-    <a href="#" class="btn btn-primary">Comment</a>
+    <a href="#" id="btn-comment"class="btn btn-comment">Comment</a>
   </div>
 </div>
 
 {{/each}}
+
+<script src="/js/comment.js"></script>
