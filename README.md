@@ -20,7 +20,7 @@ The following GitHub repo url is:
 https://github.com/tarekmn/14-mvc-tech-blog
 
 The deployed url is:
-X
+https://14-mvc-tech-blog-production.up.railway.app/
 
 In addition, I included screenshot below:
 
