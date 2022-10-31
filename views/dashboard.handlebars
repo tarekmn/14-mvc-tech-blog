@@ -13,7 +13,7 @@
       <h4>{{blog.title}}</h4>
       <h6> Created by {{blog.user.name}} </h6>
     </div>
-    <div class="card-body">
+    <div class="card-body{{@index}}">
       <p class="card-title"> {{format_time blog.createdAt}}</p>
       <p class="card-text">{{blog.description}}</p>
       <a
@@ -28,3 +28,4 @@
 {{/each}}
 
 <script src="/js/comment.js"></script>
+<script src="/js/post.js"></script>
