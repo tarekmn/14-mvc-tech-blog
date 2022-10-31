@@ -2,27 +2,27 @@ const createPost = async (event) => {
   event.preventDefault();
 
   const belowPost = document.querySelector(".belowPost");
-  const title = document.createElement("INPUT");
+  const titleinput = document.createElement("INPUT");
   const content = document.createElement("textarea");
-  title.setAttribute("type", "text");
+  titleinput.setAttribute("type", "text");
   content.setAttribute("type", "text");
-  title.className = "titleField";
+  titleinput.className = "titleField";
   content.className = "postField";
-  belowPost.append(title);
+  belowPost.append(titleinput);
   belowPost.append(content);
 
-  try {
-    const title = document.querySelector(".titleField").value;
-    const description = document.querySelector(".postField").value;
-    console.log(title);
-    console.log(description);
+  const title = document.querySelector(".titleField").value;
+  const description = document.querySelector(".postField").value;
+  console.log(title);
+  console.log(description);
 
+  try {
     const response = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({ title, description }),
       headers: { "Content-Type": "application/json" },
     });
-    location.reload();
+    // location.reload();
   } catch (err) {
     console.log(err);
   }
