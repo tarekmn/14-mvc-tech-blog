@@ -2,3 +2,30 @@
   background-color: blue;
   color: white;
 }
+
+#postbtn {
+  background-color: white;
+  border-radius: 5%;
+}
+
+#postDiv, .belowPost {
+  text-align: center;
+
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+ .commentField {
+  width: 75%;
+}
+
+.card-header, .card-body {
+  padding: 0.5%;
+}
+
+.card {
+  margin-top: 15px;
+}

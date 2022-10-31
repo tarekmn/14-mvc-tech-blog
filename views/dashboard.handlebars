@@ -1,3 +1,11 @@
+<div>
+
+  <div id="postDiv" class="card-header">
+    <button id="postbtn" class="col-6">Create Post</button>
+  </div>
+  <div class="belowPost"></div>
+</div>
+
 {{#each blogs as |blog|}}
 
   <div class="card">
@@ -8,7 +16,12 @@
     <div class="card-body">
       <p class="card-title"> {{format_time blog.createdAt}}</p>
       <p class="card-text">{{blog.description}}</p>
-      <a href="#" id="btn-comment" class="btn btn-comment">Comment</a>
+      <a
+        href="#"
+        id="btn-comment"
+        class="btn btn-comment"
+        data-blogid={{blog.id}}
+      >Comment</a>
     </div>
   </div>
 
