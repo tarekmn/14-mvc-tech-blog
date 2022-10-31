@@ -22,7 +22,7 @@ const createPost = async (event) => {
       body: JSON.stringify({ title, description }),
       headers: { "Content-Type": "application/json" },
     });
-    // location.reload();
+    location.reload();
   } catch (err) {
     console.log(err);
   }
