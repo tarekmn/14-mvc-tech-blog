@@ -37,8 +37,9 @@ router.get("/dashboard", async (req, res) => {
   }
 
   console.log(blogs);
+  console.log(req.session.user_id);
 
-  res.render("dashboard", { blogs, loggedIn: req.session.logged_in });
+  res.render("dashboard", { blogs, loggedIn: req.session.logged_in, userID: req.session.user_id  });
 });
 
 router.get("/signup", (req, res) => {

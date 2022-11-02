@@ -42,3 +42,6 @@ const createPost = async (event) => {
 };
 
 document.querySelector("#postbtn").addEventListener("click", createPost);
+
+
+

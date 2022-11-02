@@ -1,3 +1,17 @@
+{{!-- 
+{{#if userID === blog.id}}Render Edit/delete button {{else}} You're logged out{{/if}} --}}
+
+{{!-- {{userID}} working user id
+{{blog.id}}  working blog id --}}
+
+
+{{!-- {{#ifCond userID blog.id}}
+hi
+{{else}}
+   bye
+{{/ifCond}} --}}
+
+
 <div>
 
   <div id="postDiv" class="card-header">
@@ -35,6 +49,7 @@
         class="btn btn-comment"
         data-blogid={{blog.id}}
       >Comment</a>
+
     </div>
   </div>
 
