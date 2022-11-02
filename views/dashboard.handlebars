@@ -24,12 +24,12 @@ hi
 
   <div class="card">
     <div class="card-header">
-      <h4>{{blog.title}}</h4>
-      <h6> Created by {{blog.user.name}} </h6>
+  <h5>{{blog.title}} - {{blog.user.name}} </h5>
     </div>
     <div class="card-body{{@index}}">
+        <p class="card-text">{{blog.description}}</p>
       <p class="card-title"> {{format_time blog.createdAt}}</p>
-      <p class="card-text">{{blog.description}}</p>
+    
 
 <p>Comments:</p>
 {{#if blog.comments}}

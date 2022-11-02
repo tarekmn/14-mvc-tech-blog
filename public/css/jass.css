@@ -5,28 +5,13 @@
   left: 50px;
 }
 
-/* .nav-link,
-.nav-item,
-li,
-.navbar {
-  color: royalblue;
-  border: 5px solid red;
-} */
-
-
-
-#overRide,
-#overRide2,
-#overRide3 {
-  color: royalblue;
+.card-title {
+  font-size: small;
 }
 
-#overRide:hover,
-#overRide2:hover,
-#overRide3:hover {
-  color: white;
-  background-color: royalblue;
-}
+
+
+
 
 #postbtn {
   background-color: royalblue;
@@ -61,4 +46,17 @@ input {
 
 .card {
   margin-top: 15px;
+}
+
+#overRide,
+#overRide2,
+#overRide3 {
+  color: royalblue;
+}
+
+#overRide:hover,
+#overRide2:hover,
+#overRide3:hover {
+  color: white;
+  background-color: royalblue;
 }
