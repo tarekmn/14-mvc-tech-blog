@@ -50,13 +50,15 @@ input {
 
 #overRide,
 #overRide2,
-#overRide3 {
+#overRide3,
+#overRide4 {
   color: royalblue;
 }
 
 #overRide:hover,
 #overRide2:hover,
-#overRide3:hover {
+#overRide3:hover,
+#overRide4:hover {
   color: white;
   background-color: royalblue;
 }
