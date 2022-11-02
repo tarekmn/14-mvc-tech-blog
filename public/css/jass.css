@@ -1,14 +1,37 @@
 .btn-comment {
-  background-color: blue;
+  background-color: royalblue;
   color: white;
   font-size: small;
+  left: 50px;
 }
 
+/* .nav-link,
+.nav-item,
+li,
+.navbar {
+  color: royalblue;
+  border: 5px solid red;
+} */
 
+
+
+#overRide,
+#overRide2,
+#overRide3 {
+  color: royalblue;
+}
+
+#overRide:hover,
+#overRide2:hover,
+#overRide3:hover {
+  color: white;
+  background-color: royalblue;
+}
 
 #postbtn {
-  background-color: white;
-  border-radius: 5%;
+  background-color: royalblue;
+  color: white;
+  border-radius: 3%;
 }
 
 #postDiv,

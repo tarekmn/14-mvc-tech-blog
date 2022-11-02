@@ -1,22 +1,22 @@
 [
   {
-    "title": "firstpost",
-    "description": "This is the first post on this page",
+    "title": "JavaScript",
+    "description": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web.",
     "user_id": 1
   },
   {
-    "title": "secondpost",
-    "description": "This is the second post on this page",
-    "user_id": 1
+    "title": "CSS",
+    "description": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
+    "user_id": 2
   },
   {
-    "title": "thirdpost",
-    "description": "This is the third post on this page",
-    "user_id": 1
+    "title": "MySQL Database",
+    "description": "MySQL is an open-source relational database management system (RDBMS).",
+    "user_id": 3
   },
   {
-    "title": "fourthpost",
-    "description": "This is the fourth post on this page",
-    "user_id": 1
+    "title": "Node.js",
+    "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine (i.e. V8 engine) and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
+    "user_id": 4
   }
 ]

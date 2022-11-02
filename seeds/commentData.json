@@ -1,21 +1,31 @@
 [
   {
-    "content": "This is the first comment on this page",
-    "user_id": 1,
+    "content": "JavaScript has helped ignite a new wave of developers!",
+    "user_id": 4,
     "blog_id": 1
   },
   {
-    "content": "This is the second comment on this page",
-    "user_id": 1,
+    "content": "Yeah! I've built my first application using JS",
+    "user_id": 3,
+    "blog_id": 1
+  },
+  {
+    "content": "Honestly, I’m more of a backend dev. Not a fan of CSS..",
+    "user_id": 3,
     "blog_id": 2
   },
   {
-    "content": "This is the third comment on this page",
-    "user_id": 1,
+    "content": "I use MySQL for most of my projects!",
+    "user_id": 5,
     "blog_id": 3
   },
   {
-    "content": "This is the fourth comment on this page",
+    "content": "I prefer mongoose personally! But MySQL is fine.",
+    "user_id": 2,
+    "blog_id": 3
+  },
+  {
+    "content": "Node.js is easily employed as a server-side proxy!",
     "user_id": 1,
     "blog_id": 4
   }
