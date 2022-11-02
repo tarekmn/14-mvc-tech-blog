@@ -10,10 +10,11 @@ const createPost = async (event) => {
     const content = document.createElement("textarea");
     titleinput.setAttribute("type", "text");
     content.setAttribute("type", "text");
+    titleinput.setAttribute("placeholder", "Insert title here!");
+    content.setAttribute("placeholder", "Insert post body here!");
     titleinput.className = "titleField";
     content.className = "postField";
-    // document.querySelector(".titleField").defaultValue = "Title";
-    // document.querySelector(".postField").defaultValue = "Your post here";
+  
 
     belowPost.append(titleinput);
     belowPost.append(content);

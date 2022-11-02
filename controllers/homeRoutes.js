@@ -4,12 +4,13 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   const blogData = await Blog.findAll({
-    include: { model: Comment },
+    include: [{ model: Comment, include: [{ model: User }] }, { model: User }],
   });
 
   const blogs = blogData.map((data) => data.get({ plain: true }));
 
   console.log(req.session.logged_in);
+  console.log(blogs[0].comments)
 
   res.render("homepage", { blogs, loggedIn: req.session.logged_in });
 });
@@ -34,6 +35,8 @@ router.get("/dashboard", async (req, res) => {
     res.redirect("/login");
     return;
   }
+
+  console.log(blogs);
 
   res.render("dashboard", { blogs, loggedIn: req.session.logged_in });
 });

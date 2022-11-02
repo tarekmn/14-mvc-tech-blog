@@ -5,21 +5,18 @@
     "blog_id": 1
   },
   {
-
     "content": "This is the second comment on this page",
     "user_id": 1,
-    "blog_id": 1
+    "blog_id": 2
   },
   {
-
     "content": "This is the third comment on this page",
     "user_id": 1,
-    "blog_id": 1
+    "blog_id": 3
   },
   {
-
     "content": "This is the fourth comment on this page",
     "user_id": 1,
-    "blog_id": 1
+    "blog_id": 4
   }
 ]

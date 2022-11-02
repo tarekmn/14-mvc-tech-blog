@@ -1,14 +1,18 @@
 .btn-comment {
   background-color: blue;
   color: white;
+  font-size: small;
 }
+
+
 
 #postbtn {
   background-color: white;
   border-radius: 5%;
 }
 
-#postDiv, .belowPost {
+#postDiv,
+.belowPost {
   text-align: center;
 
 }
@@ -18,11 +22,17 @@ textarea {
   margin-bottom: 5%;
 }
 
- .commentField {
+.commentField {
   width: 75%;
 }
 
-.card-header, .card-body {
+input {
+  width: 100%;
+}
+
+
+.card-header,
+.card-body {
   padding: 0.5%;
 }
 

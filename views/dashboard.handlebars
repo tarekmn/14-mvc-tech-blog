@@ -16,6 +16,19 @@
     <div class="card-body{{@index}}">
       <p class="card-title"> {{format_time blog.createdAt}}</p>
       <p class="card-text">{{blog.description}}</p>
+
+<p>Comments:</p>
+{{#if blog.comments}}
+  {{#each blog.comments as |comment|}}
+    <div class="d-flex text-muted pt-3">
+      <p class="pb-3 mb-0 small lh-sm border-bottom" style="margin-left: 75px">
+        {{comment.user.name}}: 
+        {{comment.content}}
+      </p>
+    </div>
+  {{/each}}
+{{/if}}
+
       <a
         href="#"
         id="btn-comment"
@@ -25,18 +38,12 @@
     </div>
   </div>
 
+
+
+
 {{/each}}
 
-{{#if blog.Comments}}
-  {{#each blog.Comments as |comment|}}
-    <div class="d-flex text-muted pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom" style="margin-left: 75px">
-        {{comment.User.name}}
-        {{comment.content}}
-      </p>
-    </div>
-  {{/each}}
-{{/if}}
+
 
 <script src="/js/comment.js"></script>
 <script src="/js/post.js"></script>
