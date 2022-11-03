@@ -5,6 +5,13 @@
   left: 50px;
 }
 
+.btn-edit, .btn-delete  {
+  background-color: royalblue;
+  color: white;
+  font-size: small;
+  left: 50px;
+}
+
 .card-title {
   font-size: small;
 }

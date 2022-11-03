@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
 
   console.log(req.session.logged_in);
 
-
   res.render("homepage", { blogs, loggedIn: req.session.logged_in });
 });
 
@@ -36,22 +35,22 @@ router.get("/dashboard", async (req, res) => {
     return;
   }
 
-
   console.log(req.session.user_id);
 
-  res.render("dashboard", { blogs, loggedIn: req.session.logged_in, userID: req.session.user_id  });
+  res.render("dashboard", {
+    blogs,
+    loggedIn: req.session.logged_in,
+    userID: req.session.user_id,
+  });
 });
-
 
 router.get("/myposts", async (req, res) => {
   const blogData = await Blog.findAll({
     include: [{ model: Comment, include: [{ model: User }] }, { model: User }],
-    where: req.session.user_id
+    where: req.session.user_id,
   });
 
   const myblogs = blogData.map((data) => data.get({ plain: true }));
-
-
 
   if (!req.session.logged_in) {
     res.redirect("/login");
@@ -61,9 +60,12 @@ router.get("/myposts", async (req, res) => {
   console.log(myblogs);
   console.log(req.session.user_id);
 
-  res.render("myposts", { myblogs, loggedIn: req.session.logged_in, userID: req.session.user_id  });
+  res.render("myposts", {
+    myblogs,
+    loggedIn: req.session.logged_in,
+    userID: req.session.user_id,
+  });
 });
-
 
 router.get("/signup", (req, res) => {
   res.render("createaccount");

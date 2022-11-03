@@ -1,52 +1,52 @@
-{{myblogs}}
-
 <div>
 
   <div id="postDiv" class="card-header">
- My Posts:
+    My Posts:
   </div>
   <div class="belowPost"></div>
 </div>
 
-{{#each blogs as |blog|}}
+{{#each myblogs as |blog|}}
 
   <div class="card">
     <div class="card-header">
-  <h5>{{blog.title}} - {{blog.user.name}} </h5>
+      <h5>{{blog.title}} - {{blog.user.name}} </h5>
     </div>
     <div class="card-body{{@index}}">
-        <p class="card-text">{{blog.description}}</p>
+      <p class="card-text">{{blog.description}}</p>
       <p class="card-title"> {{format_time blog.createdAt}}</p>
-    
 
-{{!-- <p>Comments:</p>
-{{#if blog.comments}}
-  {{#each blog.comments as |comment|}}
-    <div class="d-flex text-muted pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom" style="margin-left: 75px">
-        {{comment.user.name}}: 
-        {{comment.content}}
-      </p>
-    </div>
-  {{/each}}
-{{/if}}
+      <p>Comments:</p>
+      {{#if blog.comments}}
+        {{#each blog.comments as |comment|}}
+          <div class="d-flex text-muted pt-3">
+            <p
+              class="pb-3 mb-0 small lh-sm border-bottom"
+              style="margin-left: 75px"
+            >
+              {{comment.user.name}}:
+              {{comment.content}}
+            </p>
+          </div>
+        {{/each}}
+      {{/if}}
 
       <a
         href="#"
-        id="btn-comment"
-        class="btn btn-comment"
+        id="btn-edit"
+        class="btn btn-edit"
         data-blogid={{blog.id}}
-      >Comment</a>
+      >Edit</a>
+      <a
+        href="#"
+        id="btn-delete"
+        class="btn btn-delete"
+        data-blogid={{blog.id}}
+      >Delete</a>
 
     </div>
-  </div> --}}
-
-
-
+  </div>
 
 {{/each}}
 
-
-
-{{!-- <script src="/js/comment.js"></script>
-<script src="/js/post.js"></script> --}}
+<script src="/js/editdelete.js"></script>
