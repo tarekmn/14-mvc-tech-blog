@@ -35,8 +35,6 @@ router.get("/dashboard", async (req, res) => {
     return;
   }
 
-  console.log(req.session.user_id);
-
   res.render("dashboard", {
     blogs,
     loggedIn: req.session.logged_in,
@@ -49,6 +47,8 @@ router.get("/myposts", async (req, res) => {
     include: [{ model: Comment, include: [{ model: User }] }, { model: User }],
     where: req.session.user_id,
   });
+
+  //works on initial but not on reload
 
   const myblogs = blogData.map((data) => data.get({ plain: true }));
 
