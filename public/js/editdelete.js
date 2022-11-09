@@ -24,17 +24,19 @@ const deletePost = async (event) => {
 const editPost = async (event) => {
   event.preventDefault();
 
-  let editArea = document.querySelectorAll(".editArea").value
+
+  const belowPost = document.querySelector(".editArea");
+  // for (let i = 0; i < editArea.length; i++) {
+  //   editArea[i].addEventListener("click", (event) => {
+  //     console.log(editArea.value);
+  //   });
+  // }
 
 
-
-
-  const blogid = event.target.dataset.blogid;
-  console.log(blogid);
   console.log("editbutton");
 
 
-  console.log(editArea)
+  console.log(belowPost.value)
 
 
   // try {

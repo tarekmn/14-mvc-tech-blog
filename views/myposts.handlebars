@@ -15,7 +15,7 @@
     <div class="card-body{{@index}}">
       <textarea
         type="text"
-        class="card-text editArea"
+        class="card-text editArea {{blog.id}}"
         placeholder="{{blog.description}}"
       ></textarea>
       <p class="card-title"> {{format_time blog.createdAt}}</p>
