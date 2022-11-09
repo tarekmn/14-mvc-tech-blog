@@ -13,7 +13,11 @@
       <h5>{{blog.title}} - {{blog.user.name}} </h5>
     </div>
     <div class="card-body{{@index}}">
-      <p class="card-text">{{blog.description}}</p>
+      <textarea
+        type="text"
+        class="card-text editArea"
+        placeholder="{{blog.description}}"
+      ></textarea>
       <p class="card-title"> {{format_time blog.createdAt}}</p>
 
       <p>Comments:</p>
@@ -35,7 +39,7 @@
         href="#"
         id="btn-edit"
         class="btn btn-edit"
-        data-editid={{blog.id}}
+        data-blogid={{blog.id}}
       >Edit</a>
       <a
         href="#"

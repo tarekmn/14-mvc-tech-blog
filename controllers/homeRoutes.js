@@ -44,13 +44,15 @@ router.get("/dashboard", async (req, res) => {
 
 router.get("/myposts", async (req, res) => {
   const blogData = await Blog.findAll({
-    include: [{ model: Comment, include: [{ model: User }] }, { model: User }],
-    where: req.session.user_id,
+    // include: [{ model: Comment }, { model: User }],
+    where: { user_id: req.session.user_id }
   });
 
   //works on initial but not on reload
 
   const myblogs = blogData.map((data) => data.get({ plain: true }));
+  console.log(myblogs)
+
 
   if (!req.session.logged_in) {
     res.redirect("/login");
