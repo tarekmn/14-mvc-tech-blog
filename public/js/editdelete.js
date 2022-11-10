@@ -25,18 +25,14 @@ const editPost = async (event) => {
   event.preventDefault();
 
 
-  const belowPost = document.querySelector(".editArea");
-  // for (let i = 0; i < editArea.length; i++) {
-  //   editArea[i].addEventListener("click", (event) => {
-  //     console.log(editArea.value);
-  //   });
-  // }
+  const indexArea = event.target.getAttribute("data-idx")
+  console.log(indexArea)
+
+  const textArea = document.getElementById({ indexArea });
 
 
-  console.log("editbutton");
 
-
-  console.log(belowPost.value)
+  console.log(textArea.value)
 
 
   // try {
@@ -74,6 +70,7 @@ if (document.querySelector("#btn-delete")) {
 if (document.querySelector("#btn-edit")) {
   for (let i = 0; i < editButtons.length; i++) {
     editButtons[i].addEventListener("click", (event) => {
+      console.log(event.target.getAttribute("data-idx"))
       editPost(event, i);
     });
   }
