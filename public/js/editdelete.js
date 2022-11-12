@@ -25,14 +25,14 @@ const editPost = async (event) => {
   event.preventDefault();
 
 
-  const indexArea = event.target.getAttribute("data-idx")
-  console.log(indexArea)
+  // const indexArea = event.target.getAttribute("data-idx")
+  // console.log(indexArea)
 
-  const textArea = document.getElementById({ indexArea });
+  // const textArea = document.getElementById({ indexArea });
 
 
 
-  console.log(textArea.value)
+  // console.log(textArea.value)
 
 
   // try {
