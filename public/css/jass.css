@@ -5,7 +5,8 @@
   left: 50px;
 }
 
-.btn-edit, .btn-delete  {
+.btn-edit,
+.btn-delete {
   background-color: royalblue;
   color: white;
   font-size: small;
@@ -16,10 +17,6 @@
   font-size: small;
 }
 
-
-
-
-
 #postbtn {
   background-color: royalblue;
   color: white;
@@ -29,7 +26,6 @@
 #postDiv,
 .belowPost {
   text-align: center;
-
 }
 
 textarea {
@@ -44,7 +40,6 @@ textarea {
 input {
   width: 100%;
 }
-
 
 .card-header,
 .card-body {

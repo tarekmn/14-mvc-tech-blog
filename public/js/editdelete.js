@@ -1,5 +1,4 @@
 
-
 const deletePost = async (event) => {
   event.preventDefault();
 
@@ -24,10 +23,8 @@ const deletePost = async (event) => {
 const editPost = async (event) => {
   event.preventDefault();
 
-
   const indexArea = event.target.getAttribute("data-idx");
   const blogid = event.target.getAttribute("blog-idx");
-
   const targetArea = document.querySelector(`#targetArea${indexArea}`).value;
 
   console.log(targetArea);

@@ -16,7 +16,6 @@ const loginLogout = async (event) => {
       alert(response.statusText);
     }
   } else {
-    // send to login page
     document.location.replace("/login");
   }
 };

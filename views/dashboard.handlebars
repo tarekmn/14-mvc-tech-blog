@@ -1,17 +1,3 @@
-{{!-- 
-{{#if userID === blog.id}}Render Edit/delete button {{else}} You're logged out{{/if}} --}}
-
-{{!-- {{userID}} working user id
-{{blog.id}}  working blog id --}}
-
-
-{{!-- {{#ifCond userID blog.id}}
-hi
-{{else}}
-   bye
-{{/ifCond}} --}}
-
-
 <div>
 
   <div id="postDiv" class="card-header">
@@ -24,24 +10,26 @@ hi
 
   <div class="card">
     <div class="card-header">
-  <h5>{{blog.title}} - {{blog.user.name}} </h5>
+      <h5>{{blog.title}} - {{blog.user.name}} </h5>
     </div>
     <div class="card-body{{@index}}">
-        <p class="card-text">{{blog.description}}</p>
+      <p class="card-text">{{blog.description}}</p>
       <p class="card-title"> {{format_time blog.createdAt}}</p>
-    
 
-<p>Comments:</p>
-{{#if blog.comments}}
-  {{#each blog.comments as |comment|}}
-    <div class="d-flex text-muted pt-3">
-      <p class="pb-3 mb-0 small lh-sm border-bottom" style="margin-left: 75px">
-        {{comment.user.name}}: 
-        {{comment.content}}
-      </p>
-    </div>
-  {{/each}}
-{{/if}}
+      <p>Comments:</p>
+      {{#if blog.comments}}
+        {{#each blog.comments as |comment|}}
+          <div class="d-flex text-muted pt-3">
+            <p
+              class="pb-3 mb-0 small lh-sm border-bottom"
+              style="margin-left: 75px"
+            >
+              {{comment.user.name}}:
+              {{comment.content}}
+            </p>
+          </div>
+        {{/each}}
+      {{/if}}
 
       <a
         href="#"
@@ -53,12 +41,7 @@ hi
     </div>
   </div>
 
-
-
-
 {{/each}}
-
-
 
 <script src="/js/comment.js"></script>
 <script src="/js/post.js"></script>
