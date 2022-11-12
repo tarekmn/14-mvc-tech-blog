@@ -17,12 +17,17 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const data = await Blog.update({
-      where: {
-        id: req.params.id,
-      },
-    });
-    console.log(data);
+    const data = await Blog.update(
+      {
+        body: req.body.description
+      }
+      ,
+      {
+        where: {
+          id: req.params.id,
+        },
+      });
+    // console.log(data);
     res.status(200).json(data);
   } catch (err) {
     console.log(err.message);
@@ -37,7 +42,7 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   } catch (err) {
     console.log(err.message);

@@ -1,4 +1,4 @@
-// let stateP = 0;
+
 
 const deletePost = async (event) => {
   event.preventDefault();
@@ -25,26 +25,26 @@ const editPost = async (event) => {
   event.preventDefault();
 
 
-  // const indexArea = event.target.getAttribute("data-idx")
-  // console.log(indexArea)
+  const indexArea = event.target.getAttribute("data-idx");
+  const blogid = event.target.getAttribute("blog-idx");
 
-  // const textArea = document.getElementById({ indexArea });
+  const targetArea = document.querySelector(`#targetArea${indexArea}`).value;
 
+  console.log(targetArea);
+  console.log(blogid);
 
+  try {
+    const response = await fetch(`/api/posts/${blogid}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(targetArea),
+    });
 
-  // console.log(textArea.value)
-
-
-  // try {
-  //   const response = await fetch(`/api/posts/${blogid}`, {
-  //     method: "PUT",
-  //     headers: { "Content-Type": "application/json" },
-  //   });
-
-  //   // location.reload();
-  // } catch (err) {
-  //   console.log(err);
-  // }
+    console.log(JSON.stringify(targetArea));
+    // location.reload();
+  } catch (err) {
+    console.log(err.message);
+  }
 
 
 }

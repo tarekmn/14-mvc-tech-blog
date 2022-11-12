@@ -16,7 +16,7 @@
       <textarea
         type="text"
         data-idx="{{@index}}"
-        id="{{@index}}"
+        id="targetArea{{@index}}"
         class="card-text editArea {{blog.id}}"
         placeholder="{{blog.description}}"
       ></textarea>
@@ -42,6 +42,7 @@
         id="btn-edit"
         class="btn btn-edit"
         data-idx="{{@index}}"
+        blog-idx="{{blog.id}}"
       >Edit</a>
       <a
         href="#"

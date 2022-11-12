@@ -51,7 +51,7 @@ router.get("/myposts", async (req, res) => {
 
 
   const myblogs = blogData.map((data) => data.get({ plain: true }));
-  console.log(myblogs)
+  // console.log(myblogs)
 
 
   if (!req.session.logged_in) {
@@ -59,8 +59,8 @@ router.get("/myposts", async (req, res) => {
     return;
   }
 
-  console.log(myblogs);
-  console.log(req.session.user_id);
+  // console.log(myblogs);
+  // console.log(req.session.user_id);
 
   res.render("myposts", {
     myblogs,
