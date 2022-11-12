@@ -34,11 +34,11 @@ const editPost = async (event) => {
     const response = await fetch(`/api/posts/${blogid}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(targetArea),
+      body: JSON.stringify({ description: targetArea }),
     });
 
-    console.log(JSON.stringify(targetArea));
-    // location.reload();
+    console.log(targetArea);
+    location.reload();
   } catch (err) {
     console.log(err.message);
   }

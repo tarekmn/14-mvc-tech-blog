@@ -16,20 +16,18 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
+  console.log("HELLO");
   try {
-    const data = await Blog.update(
-      {
-        body: req.body.description
-      }
-      ,
-      {
+    const data = await Blog.update(req.body
+      , {
         where: {
           id: req.params.id,
         },
       });
-    // console.log(data);
+    console.log(data);
     res.status(200).json(data);
   } catch (err) {
+    console.log("HELLO");
     console.log(err.message);
     res.status(400).json(err);
   }
