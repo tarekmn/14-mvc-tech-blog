@@ -64,3 +64,31 @@ input {
   color: white;
   background-color: royalblue;
 }
+
+main {
+  padding-bottom: 30px;
+}
+.card-bodyX {
+  padding: 20px;
+}
+.card-header {
+  padding: 12px 20px;
+}
+.card-header h5 {
+  margin-bottom: 0;
+}
+#postDiv {
+  background: none;
+  border: none;
+}
+#postbtn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  transition: background 0.15s ease;
+}
+#postbtn:hover {
+  background-color: #41699b;
+}
