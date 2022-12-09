@@ -14,17 +14,26 @@ As a developer, I wanted to create a new CMS-style blog site similar to a Wordpr
 
 This code does not require any installation. You can simply click the URL for the finished product.
 
+## Seed sample logins:
+
+Username: test@gmail.com
+Password: password
+
 ## Usage
 
 The following GitHub repo url is:
-https://github.com/tarekmn/14-mvc-tech-blog
+https://github.com/tarekmn/tareks-tech-blog
 
 The deployed url is:
 https://14-mvc-tech-blog-production.up.railway.app/
 
 In addition, I included screenshot below:
 
-![screenshot #1](X)
+Login:
+![Login](./public/assets/images/login.png)
+
+Home:
+![Home](./public/assets/images/home.png)
 
 ## License
 
